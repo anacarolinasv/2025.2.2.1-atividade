@@ -1,0 +1,1084 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* 3.1 - Font-family com fontes do sistema */
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    /* 3.2 - Font-size em px */
+    font-size: 16px;
+    /* 3.4 - Line-height para espaçamento entre linhas */
+    line-height: 1.7;
+    color: rgb(51, 51, 51); /* 2.3 - RGB */
+    background-color: #fafbfc; /* 2.2 - Hexadecimal - mais suave */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* 2. SISTEMAS DE CORES EM CSS */
+
+/* 2.1 - Cores usando nomes de cores */
+.cabecalho {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.cabecalho::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+    background-size: 50px 50px;
+    opacity: 0.3;
+}
+
+/* 2.2 - Cores usando sistema hexadecimal */
+.navegacao {
+    background-color: rgba(44, 62, 80, 0.98); /* Hexadecimal com transparência */
+    color: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* 2.3 - Cores usando RGB */
+.titulo-secao {
+    color: rgb(44, 62, 80); /* RGB */
+}
+
+/* 2.4 - Cores usando RGBA com transparência */
+.card-gato {
+    background-color: rgba(255, 255, 255, 1); /* RGBA com transparência */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05); /* RGBA para sombra mais suave */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 2.5 - Cores usando HSL */
+.btn-primario {
+    background-color: hsl(340, 82%, 67%); /* HSL */
+    color: white;
+}
+
+/* 2.6 - Paleta de cores com 5 cores diferentes */
+.cor-1 {
+    background-color: #667eea; /* Cor Primária - Hexadecimal */
+}
+
+.cor-2 {
+    background-color: rgb(118, 75, 162); /* Cor Secundária - RGB */
+}
+
+.cor-3 {
+    background-color: rgba(240, 147, 251, 0.9); /* Cor Terciária - RGBA */
+}
+
+.cor-4 {
+    background-color: hsl(340, 82%, 67%); /* Cor de Destaque - HSL */
+}
+
+.cor-5 {
+    background-color: #95a5a6; /* Cor Neutra - Hexadecimal */
+}
+
+
+/* 3. TIPOGRAFIA */
+
+/* 3.1 - Font-family com fontes do sistema */
+body,
+.formulario-contato input,
+.formulario-contato textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 3.5 e 3.6 - Google Fonts (Poppins e Comfortaa) */
+h1, h2, h3 {
+    /* 3.6 - Segunda fonte do Google Fonts */
+    font-family: 'Comfortaa', 'Poppins', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.titulo-secao,
+.btn-primario,
+.btn-adotar {
+    /* 3.6 - Primeira fonte do Google Fonts */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 3.2 - Diferentes tamanhos de fonte (px, em, rem, %) */
+h1 {
+    font-size: 2.5rem; /* rem */
+}
+
+h2 {
+    font-size: 32px; /* px */
+}
+
+h3 {
+    font-size: 1.5em; /* em */
+}
+
+.subtitulo-cabecalho {
+    font-size: 120%; /* % */
+}
+
+.descricao-secao {
+    font-size: 18px; /* px */
+}
+
+.card-gato-info p {
+    font-size: 1rem; /* rem */
+}
+
+/* 3.3 - Font-weight para variar espessura (normal, bold, 100-900) */
+h1 {
+    font-weight: 700; /* Bold */
+}
+
+h2 {
+    font-weight: bold; /* Normal/bold */
+}
+
+h3 {
+    font-weight: 600; /* Semi-bold */
+}
+
+.btn-primario,
+.btn-adotar {
+    font-weight: 400; /* Normal */
+}
+
+.navegacao a {
+    font-weight: 300; /* Light */
+}
+
+/* 3.4 - Line-height para espaçamento entre linhas */
+h1 {
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.8; /* Espaçamento amplo para leitura */
+}
+
+.card-gato-info .descricao {
+    line-height: 1.6;
+}
+
+/* 3.7 - Outros estilos tipográficos */
+.btn-adotar {
+    text-transform: uppercase; /* Text-transform: uppercase */
+    font-weight: 600;
+}
+
+.idade {
+    font-style: italic; /* Font-style: italic */
+    color: #666;
+}
+
+.tag {
+    text-transform: capitalize; /* Text-transform: capitalize */
+}
+
+.social-link {
+    text-decoration: none; /* Text-decoration: none */
+}
+
+.navegacao a {
+    text-decoration: none;
+}
+
+.navegacao a:hover {
+    text-decoration: underline; /* Text-decoration: underline */
+}
+
+.rodape p:last-child {
+    font-style: oblique; /* Font-style: oblique */
+}
+
+
+/* 4. BACKGROUNDS */
+
+/* 4.1 - Background-color em diferentes elementos */
+.hero {
+    background-color: #f8f9fa; /* Background-color no hero */
+}
+
+.secao-como-adotar {
+    background-color: rgb(240, 245, 250); /* RGB */
+}
+
+.secao-beneficios {
+    background-color: hsl(210, 20%, 98%); /* HSL */
+}
+
+/* 4.2 - Background-image usando URLs de imagens */
+/* Usando SVG inline para as imagens dos gatos */
+.imagem-gato-1 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"><rect width="300" height="200" fill="%23FFB6C1"/><circle cx="150" cy="80" r="40" fill="%23FFA07A"/><ellipse cx="130" cy="70" rx="8" ry="10" fill="%23000"/><ellipse cx="170" cy="70" rx="8" ry="10" fill="%23000"/><path d="M140 85 Q150 95 160 85" stroke="%23000" stroke-width="2" fill="none"/><ellipse cx="120" cy="50" rx="15" ry="20" fill="%23FFB6C1"/><ellipse cx="180" cy="50" rx="15" ry="20" fill="%23FFB6C1"/></svg>');
+}
+
+.imagem-gato-2 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"><rect width="300" height="200" fill="%23D3D3D3"/><circle cx="150" cy="80" r="40" fill="%23A9A9A9"/><ellipse cx="130" cy="70" rx="8" ry="10" fill="%23000"/><ellipse cx="170" cy="70" rx="8" ry="10" fill="%23000"/><path d="M140 85 Q150 95 160 85" stroke="%23000" stroke-width="2" fill="none"/><ellipse cx="120" cy="50" rx="15" ry="20" fill="%23D3D3D3"/><ellipse cx="180" cy="50" rx="15" ry="20" fill="%23D3D3D3"/></svg>');
+}
+
+.imagem-gato-3 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"><rect width="300" height="200" fill="%23FFE4E1"/><circle cx="150" cy="80" r="40" fill="%23F0E68C"/><ellipse cx="130" cy="70" rx="8" ry="10" fill="%23000"/><ellipse cx="170" cy="70" rx="8" ry="10" fill="%23000"/><path d="M140 85 Q150 95 160 85" stroke="%23000" stroke-width="2" fill="none"/><ellipse cx="120" cy="50" rx="15" ry="20" fill="%23FFE4E1"/><ellipse cx="180" cy="50" rx="15" ry="20" fill="%23FFE4E1"/></svg>');
+}
+
+.imagem-gato-4 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"><rect width="300" height="200" fill="%23FFA500"/><circle cx="150" cy="80" r="40" fill="%23FF8C00"/><ellipse cx="130" cy="70" rx="8" ry="10" fill="%23000"/><ellipse cx="170" cy="70" rx="8" ry="10" fill="%23000"/><path d="M140 85 Q150 95 160 85" stroke="%23000" stroke-width="2" fill="none"/><ellipse cx="120" cy="50" rx="15" ry="20" fill="%23FFA500"/><ellipse cx="180" cy="50" rx="15" ry="20" fill="%23FFA500"/></svg>');
+}
+
+.imagem-gato-5 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"><rect width="300" height="200" fill="%23FFB6C1"/><circle cx="150" cy="80" r="35" fill="%23FF69B4"/><ellipse cx="135" cy="70" rx="6" ry="8" fill="%23000"/><ellipse cx="165" cy="70" rx="6" ry="8" fill="%23000"/><path d="M145 82 Q150 88 155 82" stroke="%23000" stroke-width="1.5" fill="none"/><ellipse cx="115" cy="50" rx="12" ry="18" fill="%23FFB6C1"/><ellipse cx="185" cy="50" rx="12" ry="18" fill="%23FFB6C1"/></svg>');
+}
+
+.imagem-gato-6 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"><rect width="300" height="200" fill="%23404040"/><circle cx="150" cy="80" r="40" fill="%23333333"/><ellipse cx="130" cy="70" rx="8" ry="10" fill="%23FFF"/><ellipse cx="170" cy="70" rx="8" ry="10" fill="%23FFF"/><path d="M140 85 Q150 95 160 85" stroke="%23FFF" stroke-width="2" fill="none"/><ellipse cx="120" cy="50" rx="15" ry="20" fill="%23404040"/><ellipse cx="180" cy="50" rx="15" ry="20" fill="%23404040"/></svg>');
+}
+
+/* 4.3 - Background-size: cover */
+.card-gato-imagem {
+    background-size: cover; /* Cobre todo o elemento */
+    background-position: center;
+    height: 280px;
+    width: 100%;
+    border-radius: 0;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-gato:hover .card-gato-imagem {
+    transform: scale(1.1);
+}
+
+/* 4.3 - Background-size: contain */
+.beneficio-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><circle cx="40" cy="40" r="35" fill="%23667eea" opacity="0.15"/></svg>');
+    background-size: contain; /* Contida no elemento */
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 3.5rem;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover .beneficio-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* 4.3 - Background-size com valores específicos */
+.secao-paleta {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="30" fill="%23ffffff" opacity="0.1"/></svg>');
+    background-size: 150px 150px; /* Valores específicos */
+    background-repeat: repeat;
+}
+
+/* 4.4 - Background-position */
+.secao-contato {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><circle cx="30" cy="30" r="20" fill="%23ffffff" opacity="0.05"/></svg>');
+    background-position: center; /* Posição central */
+    background-repeat: repeat;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.hero-conteudo {
+    background-position: top; /* Topo */
+}
+
+.navegacao {
+    background-position: bottom; /* Inferior */
+}
+
+/* 4.5 - Background-repeat */
+.secao-paleta {
+    background-repeat: repeat; /* Repete em ambas as direções */
+}
+
+.card-gato-imagem {
+    background-repeat: no-repeat; /* Não repete */
+}
+
+.secao-beneficios {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="200"><rect width="40" height="200" fill="%23ffffff" opacity="0.03"/></svg>');
+    background-repeat: repeat-x; /* Repete horizontalmente */
+}
+
+.hero {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40"><rect width="200" height="40" fill="%23ffffff" opacity="0.03"/></svg>');
+    background-repeat: repeat-y; /* Repete verticalmente */
+}
+
+/* 4.6 - Combinar múltiplas propriedades de background */
+.secao-principal {
+    background-color: white; /* Cor de fundo */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><circle cx="40" cy="40" r="30" fill="%23667eea" opacity="0.02"/></svg>');
+    background-size: 100px 100px; /* Tamanho específico */
+    background-position: top right; /* Posição */
+    background-repeat: no-repeat; /* Sem repetição */
+}
+
+/* 5. GRADIENTES CSS */
+
+/* 5.1 - Gradiente linear com 2 cores */
+.cabecalho {
+    background: linear-gradient(to bottom, #667eea, #764ba2); /* 2 cores, direção to bottom */
+}
+
+/* 5.2 - Gradiente linear com 3 ou mais cores */
+.hero {
+    background: linear-gradient(135deg, #fafbfc 0%, #f0f4f8 50%, #fafbfc 100%); /* 3 cores mais suaves */
+}
+
+/* 5.3 - Gradiente linear em diferentes direções */
+.btn-primario {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* to right */
+    border: none;
+    padding: 16px 48px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+
+.btn-primario:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); /* 45 graus no hover */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.btn-primario:active {
+    transform: translateY(-1px) scale(1);
+}
+
+.btn-adotar {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); /* to bottom */
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.btn-adotar:hover {
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%); /* 135deg */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+}
+
+.btn-adotar:active {
+    transform: translateY(0);
+}
+
+/* 5.4 - Gradiente radial */
+.passo {
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08)); /* Gradiente radial */
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    background-color: white;
+}
+
+.passo:hover {
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+/* 5.5 - Gradiente complexo com múltiplas paradas de cor */
+.rodape {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 30%, #2c3e50 70%, #1a252f 100%); /* Paradas de cor específicas */
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.secao-como-adotar {
+    background: linear-gradient(to bottom, rgba(240, 245, 250, 1), rgba(240, 245, 250, 0.5), rgba(240, 245, 250, 1));
+}
+
+/* Gradiente radial complexo */
+.card-gato:hover {
+    background: radial-gradient(circle at top left, rgba(102, 126, 234, 0.05), rgba(255, 255, 255, 0.95)); /* Radial com posição */
+}
+
+/* 6. LAYOUT E COMPONENTES */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header */
+.cabecalho {
+    padding: 5rem 0 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.cabecalho-conteudo {
+    position: relative;
+    z-index: 1;
+}
+
+.cabecalho-conteudo h1 {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+}
+
+.subtitulo-cabecalho {
+    font-size: 1.4rem;
+    opacity: 0.98;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* Navegação */
+.navegacao {
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 0;
+}
+
+.navegacao a {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    position: relative;
+}
+
+.navegacao a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #f093fb;
+    transition: width 0.3s ease;
+}
+
+.navegacao a:hover {
+    color: #f093fb;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.navegacao a:hover::after {
+    width: 80%;
+}
+
+/* Hero */
+.hero {
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero-conteudo h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-conteudo p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    color: #555;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* Seções */
+.secao-principal,
+.secao-como-adotar,
+.secao-beneficios,
+.secao-paleta {
+    padding: 5rem 0;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: #2c3e50;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.titulo-secao::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.descricao-secao {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+/* Cards de Gatos */
+.grid-gatos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.card-gato {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: white;
+}
+
+.card-gato:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-gato-info {
+    padding: 2rem;
+}
+
+.card-gato-info h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.card-gato-info .idade {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #888;
+}
+
+.card-gato-info .descricao {
+    margin-bottom: 1.5rem;
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background-color: #667eea;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.tag-vacinada {
+    background-color: #2ecc71;
+}
+
+.tag-castrada {
+    background-color: #3498db;
+}
+
+.tag-amigavel {
+    background-color: #f39c12;
+}
+
+.tag-tranquilo {
+    background-color: #9b59b6;
+}
+
+.tag-energetica {
+    background-color: #e74c3c;
+}
+
+.tag-sociavel {
+    background-color: #1abc9c;
+}
+
+.tag-filhote {
+    background-color: #ff69b4;
+}
+
+.tag-carinhosa {
+    background-color: #ff1493;
+}
+
+.tag-aventureiro {
+    background-color: #8b4513;
+}
+
+/* Passos de Adoção */
+.passos-adocao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.passo {
+    text-align: center;
+    position: relative;
+}
+
+.passo-numero {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.passo:hover .passo-numero {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.passo h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.passo p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Benefícios */
+.grid-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.beneficio {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.beneficio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover::before {
+    transform: scaleX(1);
+}
+
+.beneficio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.beneficio h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.beneficio p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Paleta de Cores */
+.paleta-cores-site {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cor-paleta {
+    padding: 3.5rem 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.cor-paleta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.cor-paleta:hover::before {
+    left: 100%;
+}
+
+.cor-paleta:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Contato */
+.secao-contato {
+    padding: 4rem 0;
+}
+
+.contato-conteudo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.info-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.item-contato {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.item-contato:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.item-contato h3 {
+    margin-bottom: 0.75rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.item-contato p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+}
+
+/* Formulário */
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-form label {
+    margin-bottom: 0.75rem;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.campo-form input,
+.campo-form textarea {
+    padding: 14px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.campo-form input::placeholder,
+.campo-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: #f093fb;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 3px rgba(240, 147, 251, 0.2);
+}
+
+.btn-enviar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.btn-enviar:active {
+    transform: translateY(-1px);
+}
+
+/* Footer */
+.rodape {
+    padding: 4rem 0 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.rodape p {
+    margin: 0.75rem 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.redes-sociais {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #f093fb;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 3.5rem 0 2.5rem;
+    }
+    
+    .cabecalho-conteudo h1 {
+        font-size: 2.25rem;
+    }
+    
+    .subtitulo-cabecalho {
+        font-size: 1.1rem;
+    }
+    
+    .hero {
+        padding: 4rem 0;
+    }
+    
+    .hero-conteudo h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-conteudo p {
+        font-size: 1.1rem;
+    }
+    
+    .titulo-secao {
+        font-size: 2rem;
+    }
+    
+    .titulo-secao::after {
+        width: 60px;
+    }
+    
+    .secao-principal,
+    .secao-como-adotar,
+    .secao-beneficios,
+    .secao-paleta {
+        padding: 3.5rem 0;
+    }
+    
+    .grid-gatos,
+    .grid-beneficios {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .passos-adocao {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .navegacao ul {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .navegacao a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .card-gato-info {
+        padding: 1.5rem;
+    }
+    
+    .beneficio {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho-conteudo h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-conteudo h2 {
+        font-size: 1.75rem;
+    }
+    
+    .titulo-secao {
+        font-size: 1.75rem;
+    }
+    
+    .btn-primario {
+        padding: 14px 36px;
+        font-size: 1rem;
+    }
+}
+

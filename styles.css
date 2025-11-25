@@ -1,0 +1,81 @@
+/* Botão de Exercício - Estilo Moderno e Profissional */
+.btn-exercicio {
+    /* Estilo base */
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Gradiente moderno */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    color: white;
+    
+    /* Sombra elegante */
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    
+    /* Tipografia */
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    
+    /* Posicionamento */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de brilho ao passar o mouse */
+.btn-exercicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-exercicio:hover::before {
+    left: 100%;
+}
+
+/* Estado hover */
+.btn-exercicio:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 50%, #f5576c 100%);
+}
+
+/* Estado active (quando clicado) */
+.btn-exercicio:active {
+    transform: translateY(-1px) scale(1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Estado focus para acessibilidade */
+.btn-exercicio:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3), 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Animação suave ao carregar */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-exercicio {
+    animation: fadeInUp 0.6s ease-out;
+}
